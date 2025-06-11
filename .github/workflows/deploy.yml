@@ -1,4 +1,4 @@
-﻿name: Deploy MkDocs to GitHub Pages
+﻿name: Deploy MkDocs using mkdocs gh-deploy
 
 on:
   push:
@@ -6,9 +6,7 @@ on:
       - main
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
   deploy:
@@ -26,15 +24,10 @@ jobs:
           python-version: "3.x"
 
       - name: Install dependencies
-        run: pip install mkdocs mkdocs-material mkdocs-git-revision-date-localized-plugin pymdown-extensions
+        run: |
+          pip install mkdocs mkdocs-material mkdocs-git-revision-date-localized-plugin pymdown-extensions
 
-      - name: Build site
-        run: mkdocs build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          cname: teller.churu.dev
-          force_orphan: true
+      - name: Deploy with mkdocs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: mkdocs gh-deploy --force --clean --verbose
