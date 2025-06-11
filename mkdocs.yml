@@ -1,0 +1,45 @@
+﻿site_name: TelleR Programming Wiki
+site_description: VR 방탈출 게임 개발을 위한 내부 기술 문서
+site_author: TelleR Team
+site_url: https://yujin2625.github.io/TelleR-programming-wiki
+
+theme:
+  name: material
+  language: ko
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - content.code.copy
+    - navigation.top
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+
+nav:
+  - 홈: index.md
+  - 프로젝트 개요: overview.md
+  - 게임 디자인: game-design.md
+  - VR 상호작용: vr-interaction.md
+  - 네트워크 구조: network-architecture.md
+  - 에셋 파이프라인: asset-pipeline.md
+  - FAQ: troubleshooting.md
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      locale: ko
+      type: timeago
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.keys
