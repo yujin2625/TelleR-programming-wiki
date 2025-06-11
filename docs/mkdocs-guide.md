@@ -143,3 +143,4 @@ TelleR-programming-wiki/
 ---
 
 문의 사항은 관리자 또는 GitHub 이슈 페이지를 통해 공유해주세요.
+`@박유진`
