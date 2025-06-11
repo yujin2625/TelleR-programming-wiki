@@ -2,6 +2,7 @@
 site_description: VR 방탈출 게임 개발을 위한 내부 기술 문서
 site_author: TelleR Team
 site_url: https://yujin2625.github.io/TelleR-programming-wiki
+site_url: https://teller.churu.dev
 
 theme:
   name: material
@@ -23,6 +24,7 @@ nav:
   - VR 상호작용: vr-interaction.md
   - 네트워크 구조: network-architecture.md
   - 에셋 파이프라인: asset-pipeline.md
+  - 위키 사용 가이드: mkdocs-guide.md
   - FAQ: troubleshooting.md
 
 plugins:
