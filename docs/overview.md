@@ -16,7 +16,7 @@
 
 | 항목     | 세부 내용                   |
 | -------- | --------------------------- |
-| 엔진     | Unity 2022 LTS              |
+| 엔진     | Unity 6000.1.2f1            |
 | XR       | Unity XR Plugin             |
-| 플랫폼   | Meta Quest 2, PC VR         |
-| 네트워크 | Unity Gaming Services (UGS) |
+| 플랫폼   | Meta Quest 2                |
+| 네트워크 | Photon Fusion               |
