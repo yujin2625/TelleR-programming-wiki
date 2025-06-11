@@ -45,3 +45,8 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.snippets
   - pymdownx.keys
+
+extra_javascript:
+  - js/export-buttons.js
+extra_css:
+  - css/custom.css
