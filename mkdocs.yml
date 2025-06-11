@@ -53,3 +53,5 @@ extra_javascript:
 
 extra_css:
   - css/custom.css
+extra:
+  include_zip_download: true
