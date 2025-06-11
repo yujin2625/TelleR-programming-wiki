@@ -29,5 +29,7 @@ jobs:
 
       - name: Deploy with mkdocs
         env:
+          GIT_COMMITTER_NAME: github-actions
+          GIT_COMMITTER_EMAIL: github-actions@github.com
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: mkdocs gh-deploy --force --clean --verbose
