@@ -315,6 +315,25 @@
   
   
     <li class="md-tabs__item">
+      <a href="../mkdocs-guide/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  위키 사용 가이드
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../troubleshooting/" class="md-tabs__link">
         
   
@@ -465,6 +484,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    네트워크 구조
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -476,6 +508,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      구성도 요약
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      주요 데이터 흐름
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      예외 처리
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -494,6 +572,28 @@
   
   <span class="md-ellipsis">
     에셋 파이프라인
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    위키 사용 가이드
     
   </span>
   
@@ -545,6 +645,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      구성도 요약
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      주요 데이터 흐름
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      예외 처리
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -560,6 +695,24 @@
 
 
 <h1 id="_1">네트워크 구조<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">구성도 요약<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>UGS Lobby + Relay 기반 P2P 연결</li>
+<li>클라이언트 주도형 게임 흐름 (호스트 제어)</li>
+<li>상태 동기화: 퍼즐, 위치, 타이머</li>
+</ul>
+<h2 id="_3">주요 데이터 흐름<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Lobby 접속 및 플레이어 매칭</li>
+<li>Relay 생성 및 연결</li>
+<li>퍼즐 상태 동기화</li>
+<li>종료 조건 감지 및 통보</li>
+</ol>
+<h2 id="_4">예외 처리<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>재접속 시 퍼즐 상태 유지</li>
+<li>연결 끊김 시 대체 호스트 지정 고려</li>
+</ul>
 
 
 
@@ -580,7 +733,7 @@
     <span class="md-icon" title="마지막 업데이트">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025년 6월 11일 05:41:37 UTC"><span class="timeago" datetime="2025-06-11T05:41:37+00:00" locale="ko"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025년 6월 11일 05:41:37 UTC">2025-06-11</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025년 6월 11일 06:20:33 UTC"><span class="timeago" datetime="2025-06-11T06:20:33+00:00" locale="ko"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025년 6월 11일 06:20:33 UTC">2025-06-11</span>
   </span>
 
     
