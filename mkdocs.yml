@@ -49,5 +49,7 @@ markdown_extensions:
 extra_javascript:
   - js/export-buttons.js
   - js/export-html.js
+  - js/export-site-link.js
+
 extra_css:
   - css/custom.css

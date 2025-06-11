@@ -1,0 +1,45 @@
+name: Build & Zip MkDocs Site
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-zip:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install MkDocs dependencies
+        run: |
+          pip install mkdocs mkdocs-material mkdocs-git-revision-date-localized-plugin pymdown-extensions
+
+      - name: Build MkDocs site
+        run: mkdocs build
+
+      - name: Create export folder
+        run: mkdir -p docs/assets/export
+
+      - name: Zip built site
+        run: zip -r docs/assets/export/site.zip site/
+
+      - name: Commit and push site.zip
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add docs/assets/export/site.zip
+          git commit -m "chore: 자동 생성된 site.zip 업데이트" || echo "No changes to commit"
+          git push origin main
